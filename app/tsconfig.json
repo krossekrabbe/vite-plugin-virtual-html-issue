@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "skipLibCheck": true,
+    "module": "es2020",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "downlevelIteration": true,
+    // "lib" defines only which APIs are available in the target environment / browser.
+    // It does not make that stuff magically work! You have to include polyfills for everything which is not supported
+    // by any browser which we would like to support.
+    "lib": [
+      // DOM API is supported by all browsers
+      "DOM",
+      // E.g. iterable URLSearchParams. Chrome, FF since 2016, Edge since 2018. IE11 needs polyfill.
+      "DOM.Iterable",
+      // Even IE11 supports ES5. We won't provide any ES5 polyfills for older browsers.
+      "ES5",
+      // Chrome and FF since 2014, IE11 needs a polyfill
+      "ES2015.Promise",
+      // E.g. built in types like Map, Set. It is basically supported by all browsers, but IE11 needs support
+      // for iterables in the constructor, so include a polyfill to fully support IE11.
+      "ES2015.Collection",
+      // E.g. Object.entries(); Chrome + FF since 2016; IE11 requires polyfill
+      "ES2017.Object",
+      // E.g. .flatMap(); Chrome + FF since 2018; IE11 requires polyfill
+      "ES2019.Array",
+      // E.g. Object.fromEntries()
+      "ES2019.Object"
+    ],
+    "allowSyntheticDefaultImports": true,
+    // esModuleInterop was required to make image imports work. Without it they were exported as modules instead of
+    // strings.
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority"
+  }
+}

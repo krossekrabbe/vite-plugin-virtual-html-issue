@@ -1,0 +1,87 @@
+{
+  "private": true,
+  "workspaces": [
+    "app"
+  ],
+  "packageManager": "yarn@3.5.1",
+  "devDependencies": {
+    "@yarnpkg/sdks": "^2.5.1-rc.2",
+    "chalk": "^4.1.0",
+    "eslint": "^8.2.0",
+    "fsevents1": "npm:fsevents@^1.2.13",
+    "fsevents2": "npm:fsevents@^2.3.2",
+    "prettier": "^2.4.1",
+    "typescript": "4.9.5"
+  },
+  "resolutions": {
+    "csstype": "3.1.2",
+    "@types/react": "17.0.58",
+    "react-virtualized": "patch:react-virtualized@9.22.3#./.yarn/patches/react-virtualized-9.22.3.patch",
+    "synckit@^0.8.4": "patch:synckit@npm%3A0.8.4#./.yarn/patches/synckit-npm-0.8.4-ee1ab9a997.patch"
+  },
+  "dependenciesMeta": {
+    "@esbuild/darwin-arm64": {
+      "unplugged": false
+    },
+    "@esbuild/darwin-x64": {
+      "unplugged": false
+    },
+    "@esbuild/linux-arm64": {
+      "unplugged": false
+    },
+    "@esbuild/linux-ia32": {
+      "unplugged": false
+    },
+    "@esbuild/linux-x64": {
+      "unplugged": false
+    },
+    "@esbuild/win32-arm64": {
+      "unplugged": false
+    },
+    "@esbuild/win32-ia32": {
+      "unplugged": false
+    },
+    "@esbuild/win32-x64": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-darwin-arm64": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-darwin-x64": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-linux-arm64-gnu": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-linux-arm64-musl": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-linux-x64-gnu": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-linux-x64-musl": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-win32-arm64-msvc": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-win32-ia32-msvc": {
+      "unplugged": false
+    },
+    "@node-rs/jieba-win32-x64-msvc": {
+      "unplugged": false
+    },
+    "fsevents": {
+      "unplugged": false
+    },
+    "nan": {
+      "unplugged": false
+    },
+    "node-gyp": {
+      "unplugged": false
+    },
+    "open": {
+      "unplugged": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="google" content="notranslate">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>App</title>
+
+    <style>
+        html, body, #root {
+            height: 100%;
+        }
+
+        #root {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+  </head>
+
+  <body class="notranslate">
+    <div id="root"></div>
+    <script>
+      // Some dependencies - react-tridi to be exact - check incorrectly for the
+      // existing of the nodejs global variable. Therefore, they require it to
+      // be available at runtime. Putting that into vite.config.js's define
+      // section won't work because then the build will fail. Seems to work only
+      // if it is defined only during runtime, not build time.
+      if (global === undefined) {
+        var global = window;
+      }
+    </script>
+
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
